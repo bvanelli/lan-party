@@ -1,0 +1,13 @@
+services:
+  linuxgsm-css:
+    image: gameservermanagers/gameserver:css
+    container_name: css-server
+    volumes:
+      - ./data:/data
+      - ./config/cssserver.cfg:/data/serverfiles/cstrike/cfg/cssserver.cfg:ro
+      - ./config/gungame.config.txt:/data/serverfiles/cstrike/cfg/gungame/css/gungame.config.txt:ro
+      - ./config/admins_simple.ini:/data/serverfiles/cstrike/addons/sourcemod/configs/admins_simple.ini:ro
+    ports:
+      - "27016:27015/tcp"
+      - "27016:27015/udp"
+    restart: unless-stopped

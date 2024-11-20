@@ -1,0 +1,12 @@
+services:
+  linuxgsm-cs:
+    image: gameservermanagers/gameserver:cs
+    container_name: cs-server
+    volumes:
+      - ./data:/data
+      - ./config/csserver.cfg:/data/serverfiles/cstrike/csserver.cfg:ro
+      - ./config/admins.ini:/data/serverfiles/cstrike/addons/amxmodx/configs/users.ini:ro
+    ports:
+      - "27015:27015/tcp"
+      - "27015:27015/udp"
+    restart: unless-stopped

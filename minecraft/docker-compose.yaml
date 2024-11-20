@@ -1,0 +1,30 @@
+
+services:
+  mc:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft
+    restart: always
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: TRUE
+      MEMORY: 2G
+      ONLINE_MODE: FALSE
+      SERVER_NAME: "My Company Lan Party"
+      # Here is a list of admins for your server. For offline servers, just use the name you are trying to login with
+      OPS: |
+          brunno
+      WORLD: /worlds/stonehenge
+      ICON: https://github.githubassets.com/favicons/favicon.svg
+      TYPE: SPIGOT
+      SPIGOT_DOWNLOAD_URL: https://serverjar.org/api.php?serverType=spigot&version=1.21.3
+      # FORCE_REDOWNLOAD=true  # only first install
+      # Spiget installs 63714 which is ScreamingBedWars
+      # https://www.spigotmc.org/resources/screaming-bedwars-1-8-8-1-21-3.63714/
+      SPIGET_RESOURCES: 63714
+    volumes:
+      - ./data:/data
+      - ./worlds:/worlds:ro
+      # mount bedwars config. The arena is mounted using a random uuid
+      - ./config/config.yml:/data/plugins/BedWars/config.yml:ro
+      - ./config/arena.yml:/data/plugins/BedWars/arenas/eb402a1f-5b37-452a-a37f-8812eb62c511.yml
