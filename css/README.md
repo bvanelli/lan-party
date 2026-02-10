@@ -6,9 +6,9 @@ To start installation, simply start downloading game files with:
 docker compose up -d
 ```
 
-You can configure your server with password using the `config/cssserver.cfg`. Alternatively, here is the 
+You can configure your server with password using the `config/cssserver.cfg`. Alternatively, here is the
 [cheat sheet](https://basicer.com/halflife-2-cvar-list) with all commands allowed on your server configuration. If you
-want to play the vanilla game, you don't have to update anything. When changing configs, restart server for them to 
+want to play the vanilla game, you don't have to update anything. When changing configs, restart the server for them to
 take effect.
 
 The folder for mod installation is `./datas/serverfiles/cstrike`.

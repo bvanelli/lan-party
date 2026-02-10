@@ -1,6 +1,7 @@
 services:
   linuxgsm-cs:
     image: gameservermanagers/gameserver:cs
+    restart: always
     container_name: cs-server
     volumes:
       - ./data:/data
@@ -9,4 +10,3 @@ services:
     ports:
       - "27015:27015/tcp"
       - "27015:27015/udp"
-    restart: unless-stopped

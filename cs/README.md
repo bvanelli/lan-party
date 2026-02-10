@@ -1,6 +1,6 @@
 # Installation
 
-To start installation, simply start downloading game files with:
+To start installation, start downloading game files with:
 
 ```bash
 docker compose up -d
@@ -8,7 +8,7 @@ docker compose up -d
 
 You can configure your server with password using the `config/csserver.cfg`. Alternatively, here is the 
 [cheat sheet](https://txdv.github.io/cstrike-cvarlist/) with all commands allowed on your server configuration. If you
-want to play the vanilla game, you don't have to update anything. When changing configs, restart server for them to 
+want to play the vanilla game, you don't have to update anything. When changing configs, restart the server for them to 
 take effect.
 
 The folder for mod installation is `./datas/serverfiles/cstrike`.
@@ -67,6 +67,6 @@ You have glass under you, and fight with grenades. Last man standing wins.
 
 ### de_747
 
-Classic map playing inside a Boing 747.
+Classic map playing inside a Boeing 747.
 
 [![](https://gamebanana.com/mods/embeddables/82979?type=large)](https://gamebanana.com/mods/82979)

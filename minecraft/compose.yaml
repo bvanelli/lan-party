@@ -14,11 +14,11 @@ services:
       # Here is a list of admins for your server. For offline servers, just use the name you are trying to login with
       OPS: |
           brunno
-      WORLD: /worlds/stonehenge
+      WORLD: /worlds/stonehenge.zip
       ICON: https://github.githubassets.com/favicons/favicon.svg
       TYPE: SPIGOT
-      SPIGOT_DOWNLOAD_URL: https://serverjar.org/api.php?serverType=spigot&version=1.21.3
-      # FORCE_REDOWNLOAD=true  # only first install
+      SPIGOT_DOWNLOAD_URL: https://files.mcjars.app/spigot/1.21.11/4592/server.jar
+      # FORCE_REDOWNLOAD: true  # only first install or if your server says files are corrupted
       # Spiget installs 63714 which is ScreamingBedWars
       # https://www.spigotmc.org/resources/screaming-bedwars-1-8-8-1-21-3.63714/
       SPIGET_RESOURCES: 63714
