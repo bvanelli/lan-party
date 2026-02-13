@@ -1,6 +1,6 @@
 # Installation
 
-To start installation, simply start downloading game files with:
+To start installation, start downloading game files with:
 
 ```bash
 docker compose up -d
@@ -27,14 +27,26 @@ to manually do:
 - metamodsource
 - sourcemod
 
-To set yourself as the admin, update the config under `config/admins_simple.ini`.
+To set yourself as the admin, update the config under `config/admins_simple.ini`. After that, you will be able to use 
+the command `sm_admin` on the server, and use many different commands. Create a bind for easy access:
+
+```
+bind k sm_admin
+```
 
 ## NoBlock
 
-You also want the NoBlock if you are running GunGame or surf. It's generally a good thing in tight maps.
+The NoBlock plugin makes sure players cannot collide with each other on the map. It's generally a good thing in
+tight maps (like GunGame), where players can get stuck on the same spawn position.
+
+NoBlock is also **a must** when are running surf or bhop.
 
 - [Link to mod page](https://forums.alliedmods.net/showthread.php?t=91617?t=91617)
 - [Direct download link](https://forums.alliedmods.net/attachment.php?attachmentid=74064&d=1285431495)
+
+Here are some useful commands:
+
+- `sm_noblock <0 or 1>`: Removes player vs. player collisions. (Default: 1)
 
 ## GunGame
 
@@ -43,10 +55,23 @@ GunGame is fun for CSS because they make the game much more dynamic and fun for 
 - [Link to mod page](https://forums.alliedmods.net/showthread.php?t=93977)
 - [Direct download link](https://forums.alliedmods.net/attachment.php?attachmentid=133712&d=1400696532)
 
+Here are some useful commands:
+
+- `gg_enable`: Turn on gungame and restart the game.
+- `gg_disable`: Turn off gungame and restart the game.
+- `gg_restart`: Restarts the whole game from the beginning.
+
 And for the deathmatch plugin, so that you instantly respawn:
 
 - [Link to mod page](http://forums.alliedmods.net/showthread.php?t=103242)
 - [Direct download link](https://forums.alliedmods.net/attachment.php?attachmentid=108943&d=1346584450)
+
+Here are some useful commands:
+
+- `sm_ggdm_enable <0 or 1>`: Enable/disable deathmatch (default 1).
+- `sm_ggdm_sp_enable <0 or 1>`: Enable/disable spawn protection (default 1).
+- `sm_ggdm_sptime <number>`: Sets the amount of seconds users will be protected
+from getting killed on their respawn (default 2).
 
 # Maps
 
@@ -69,7 +94,7 @@ Good map for GunGame.
 
 Beginner map for surf.
 
-For this map, you want to make sure to execute the following commands as admin, on your console (see 
+For this map, you want to make sure to execute the following commands as admin, on your console (see
 [here for explanation](https://www.tobyscs.com/cs-surf-settings/)):
 
 ```
@@ -81,6 +106,6 @@ sm_cvar sv_airaccelerate 1000
 
 ### awp_india
 
-AWP only map where players shoot at each other from the other side of the map.
+AWP-only map where players shoot at each other from the other side of the map.
 
 [![](https://gamebanana.com/mods/embeddables/118646?type=large)](https://gamebanana.com/mods/118646)
